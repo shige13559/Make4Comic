@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKo-n2-lw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="-856"/>
+            <point key="canvasLocation" x="2777" y="-860"/>
         </scene>
         <!--Paint View Controller-->
         <scene sceneID="EI8-0y-lVX">
@@ -141,10 +141,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxz-JG-8Fz">
-                                <rect key="frame" x="15" y="682" width="103" height="102"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBm-1t-arR">
+                                <rect key="frame" x="156" y="704" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="消しゴム"/>
+                                <state key="normal" title="一つ前に戻る"/>
+                                <connections>
+                                    <action selector="undoButton:" destination="MwN-MW-rkC" eventType="touchUpInside" id="C40-As-que"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -159,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x8l-5b-FBH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213" y="116"/>
+            <point key="canvasLocation" x="2211.594202898551" y="115.84821428571428"/>
         </scene>
         <!--Paint2 View Controller-->
         <scene sceneID="kod-Vd-RYw">
