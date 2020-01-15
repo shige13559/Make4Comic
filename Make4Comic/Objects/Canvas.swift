@@ -11,11 +11,15 @@ import UIKit
 class Canvas: UIView{
     
     func undo(){
-        
         _ = lines.popLast()
         setNeedsDisplay()
-        
     }
+    
+    func clear(){
+        lines.removeAll()
+        setNeedsDisplay()
+    }
+    
     var lines = [[CGPoint]]()
     
     
@@ -42,7 +46,7 @@ class Canvas: UIView{
         }
         
         context.setStrokeColor(UIColor.black.cgColor)
-        context.setLineWidth(5)
+        context.setLineWidth(3)
         context.setLineCap(.round)
         
         lines.forEach { (line) in

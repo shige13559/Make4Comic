@@ -151,6 +151,27 @@ class PaintViewController: UIViewController {
     }
     
     
+    @IBAction func clearButton(_ sender: UIButton) {
+        canvas.clear()
+    }
+    
+    @IBAction func redoButton(_ sender: UIButton) {
+        undoManager?.redo()
+        undoManager?.registerUndo(withTarget: self, handler: { (targetSelf) in
+            targetSelf.handleRedo()
+        })
+        
+    }
+    
+    @objc fileprivate func handleRedo(){
+            print("進め！")
+
+            
+    }
+    
+    
+    
+    
     @IBAction func didClickButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toNext2", sender: nil)
     }

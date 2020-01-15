@@ -20,6 +20,7 @@
 		B526DED423CDE73500BF8E91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DED323CDE73500BF8E91 /* MainViewController.swift */; };
 		B526DED623CDE74600BF8E91 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DED523CDE74600BF8E91 /* ShareViewController.swift */; };
 		B526DEDA23CE1A6600BF8E91 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DED923CE1A6500BF8E91 /* Canvas.swift */; };
+		B526DEDE23CE4E0400BF8E91 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B526DEDD23CE4E0400BF8E91 /* ExampleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B526DED323CDE73500BF8E91 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B526DED523CDE74600BF8E91 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		B526DED923CE1A6500BF8E91 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		B526DEDD23CE4E0400BF8E91 /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				B526DECF23CDE71F00BF8E91 /* Paint3ViewController.swift */,
 				B526DED123CDE72700BF8E91 /* Paint4ViewController.swift */,
 				B526DED523CDE74600BF8E91 /* ShareViewController.swift */,
+				B526DEDD23CE4E0400BF8E91 /* ExampleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B526DEDE23CE4E0400BF8E91 /* ExampleViewController.swift in Sources */,
 				B526DECA23CDE6F100BF8E91 /* PrepareViewController.swift in Sources */,
 				B526DED623CDE74600BF8E91 /* ShareViewController.swift in Sources */,
 				B526DEB523CDE5B100BF8E91 /* AppDelegate.swift in Sources */,

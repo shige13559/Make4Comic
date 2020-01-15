@@ -22,18 +22,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntn-3B-P4U">
-                                <rect key="frame" x="128" y="526" width="170" height="119"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="作成する"/>
-                                <connections>
-                                    <action selector="didClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzz-Ka-Ihb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9w-jg-iGA">
                                 <rect key="frame" x="207" y="694" width="170" height="119"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ルール"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntn-3B-P4U">
+                                <rect key="frame" x="108" y="416" width="199" height="119"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="自分でお題を決めて作成する"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dzz-Ka-Ihb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1139" y="117"/>
         </scene>
-        <!--Share View Controller-->
+        <!--Example View Controller-->
         <scene sceneID="fpT-Zx-e56">
             <objects>
-                <viewController id="bmr-qh-DhE" customClass="ShareViewController" customModule="Make4Comic" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="bmr-qh-DhE" customClass="ExampleViewController" customModule="Make4Comic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ixM-xk-m6s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WKo-n2-lw5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2777" y="-860"/>
+            <point key="canvasLocation" x="2776.811594202899" y="-860.49107142857144"/>
         </scene>
         <!--Paint View Controller-->
         <scene sceneID="EI8-0y-lVX">
@@ -142,11 +142,27 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBm-1t-arR">
-                                <rect key="frame" x="156" y="704" width="92" height="44"/>
+                                <rect key="frame" x="84" y="709" width="92" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="一つ前に戻る"/>
                                 <connections>
                                     <action selector="undoButton:" destination="MwN-MW-rkC" eventType="touchUpInside" id="C40-As-que"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvh-kX-JbN">
+                                <rect key="frame" x="300" y="709" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="一つ前にするx"/>
+                                <connections>
+                                    <action selector="redoButton:" destination="MwN-MW-rkC" eventType="touchUpInside" id="67D-Va-V40"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1b-s1-TwT">
+                                <rect key="frame" x="203" y="723" width="87" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="全消去"/>
+                                <connections>
+                                    <action selector="clearButton:" destination="MwN-MW-rkC" eventType="touchUpInside" id="tEx-Na-r9O"/>
                                 </connections>
                             </button>
                         </subviews>
