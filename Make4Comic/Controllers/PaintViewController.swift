@@ -102,13 +102,18 @@ class PaintViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
+    var timer = Timer()
+    var seconds = 5
+    var seconds2 = 3
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    
     @IBOutlet weak var paintView: UIView!
     
-    let canvas = Canvas()
     
-//    override func loadView() {
-//        self.view = canvas
-//    }
+    
+    let canvas = Canvas()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,6 +128,17 @@ class PaintViewController: UIViewController {
 //
 //        // 枠の幅
 //        paintView.layer.borderWidth = 5.0
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Clock), userInfo: nil, repeats: true)
+        timeLabel.font = UIFont.init(name: "aria", size: 48)
+        timeLabel.textAlignment = .center
+        timeLabel.textColor = .black
+        timeLabel.backgroundColor = .blue
+        self.view.addSubview(timeLabel)
+        Timer.scheduledTimer(withTimeInterval: 8, repeats: false) {_ in
+//            self.label.text = "お願いします"
+            self.performSegue(withIdentifier: "toNext2", sender: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -130,6 +146,21 @@ class PaintViewController: UIViewController {
         
         //受け取った値を代入
         label.text = text
+    }
+    
+    @objc func Clock(){
+        
+        seconds = seconds - 1
+        timeLabel.text = String(seconds)
+        
+
+        if (seconds == 0){
+            timeLabel.backgroundColor = .red
+            timeLabel.text = "Times UP　次の人に渡してください"
+            timer.invalidate()
+            print(timeLabel)
+        }
+        
         
     }
     
@@ -165,12 +196,7 @@ class PaintViewController: UIViewController {
     
     @objc fileprivate func handleRedo(){
             print("進め！")
-
-            
     }
-    
-    
-    
     
     @IBAction func didClickButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toNext2", sender: nil)

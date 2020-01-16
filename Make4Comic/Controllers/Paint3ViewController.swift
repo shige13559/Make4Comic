@@ -101,6 +101,12 @@ class Paint3ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
     
+    var timer = Timer()
+    var seconds = 5
+    var seconds2 = 3
+    
+    @IBOutlet weak var timeLabel: UILabel!
+    
     
     @IBOutlet weak var paintView: UIView!
     
@@ -119,6 +125,17 @@ class Paint3ViewController: UIViewController {
 //
 //        // 枠の幅
 //        paintView.layer.borderWidth = 5.0
+        
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(Clock), userInfo: nil, repeats: true)
+        timeLabel.font = UIFont.init(name: "aria", size: 48)
+        timeLabel.textAlignment = .center
+        timeLabel.textColor = .black
+        timeLabel.backgroundColor = .blue
+        self.view.addSubview(timeLabel)
+        Timer.scheduledTimer(withTimeInterval: 8, repeats: false) {_ in
+//            self.label.text = "お願いします"
+            self.performSegue(withIdentifier: "toNext4", sender: nil)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -126,8 +143,44 @@ class Paint3ViewController: UIViewController {
         
         //受け取った値を代入
         label.text = text
+    }
+    
+    @objc func Clock(){
+        
+        seconds = seconds - 1
+        timeLabel.text = String(seconds)
+        
+
+        if (seconds == 0){
+            timeLabel.backgroundColor = .red
+            timeLabel.text = "Times UP　次の人に渡してください"
+            timer.invalidate()
+            print(timeLabel)
+        }
+        
         
     }
+    
+    @IBAction func undoButton(_ sender: UIButton) {
+            undoManager?.undo()
+    //        counter.increment()
+    //        counter.manager.undo()
+            undoManager?.registerUndo(withTarget: self, handler: { (targetSelf) in
+                targetSelf.handleUndo()
+            })
+        }
+        
+        
+        
+        @objc fileprivate func handleUndo(){
+            print("Delate")
+            canvas.undo()
+        }
+        
+        
+        @IBAction func clearButton(_ sender: UIButton) {
+            canvas.clear()
+        }
     
     @IBAction func didClickButton(_ sender: UIButton) {
         performSegue(withIdentifier: "toNext4", sender: nil)
