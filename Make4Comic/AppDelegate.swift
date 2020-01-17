@@ -11,10 +11,10 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var image1: UIView?
-    var image2: UIView?
-    var image3: UIView?
-    var image4: UIView?
+    var image1: UIImage?
+    var image2: UIImage?
+    var image3: UIImage?
+    var image4: UIImage?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {

@@ -194,7 +194,7 @@ class Paint2ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         var appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.image2 = paintView
+        appDelegate.image2 = canvas.asImage()
         
         if segue.identifier == "toNext3" {
             let svc = segue.destination as! Paint3ViewController

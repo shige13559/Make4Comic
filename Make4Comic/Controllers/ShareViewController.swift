@@ -11,8 +11,14 @@ import UIKit
 class ShareViewController: UIViewController {
     
     
+    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet weak var ShareView: UIView!
+    
+    @IBOutlet weak var imageView2: UIImageView!
+    
+    @IBOutlet weak var imageView3: UIImageView!
+    
+    @IBOutlet weak var imageView4: UIImageView!
     
     
     var text = String()
@@ -28,7 +34,18 @@ class ShareViewController: UIViewController {
         label.text = text
         
         var appDelegate = UIApplication.shared.delegate as! AppDelegate
-        ShareView = appDelegate.image4
+        imageView.image = appDelegate.image1
+        
+//        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        imageView2.image = appDelegate.image2
+        
+//        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        imageView3.image = appDelegate.image3
+        
+//        appDelegate = UIApplication.shared.delegate as! AppDelegate
+        imageView4.image = appDelegate.image4
+        
+        
     }
     
 

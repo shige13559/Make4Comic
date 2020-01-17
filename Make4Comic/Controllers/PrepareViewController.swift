@@ -13,6 +13,9 @@ class PrepareViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
 //    var inputText:String!
     
+    
+    @IBOutlet weak var errorLabel: UILabel!
+    
      var text = String()
     
     override func viewDidLoad() {
@@ -31,7 +34,14 @@ class PrepareViewController: UIViewController {
     
     
     @IBAction func prepareComplete(_ sender: UIButton) {
-        performSegue(withIdentifier: "toNext", sender: nil)
+        if textField.text!.isEmpty{
+            errorLabel.text = "お題が入力されていません"
+            return
+        }else{
+            performSegue(withIdentifier: "toNext", sender: nil)
+        }
+        
+//        performSegue(withIdentifier: "toNext", sender: nil)
     }
     
     func handOver(_ word:String) {

@@ -101,8 +101,7 @@ class PaintViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     var timer = Timer()
-    var seconds = 5
-    var seconds2 = 3
+    var seconds = 90
     
     @IBOutlet weak var timeLabel: UILabel!
     
@@ -121,6 +120,8 @@ class PaintViewController: UIViewController {
         canvas.backgroundColor = .red
         canvas.frame = paintView.frame
         
+        
+        
 //        // 枠のカラー
 //        paintView.layer.borderColor = UIColor.black.cgColor
 //
@@ -133,10 +134,11 @@ class PaintViewController: UIViewController {
         timeLabel.textColor = .black
         timeLabel.backgroundColor = .blue
         self.view.addSubview(timeLabel)
-        Timer.scheduledTimer(withTimeInterval: 8, repeats: false) {_ in
+        Timer.scheduledTimer(withTimeInterval: 93, repeats: false) {_ in
 //            self.label.text = "お願いします"
             self.performSegue(withIdentifier: "toNext2", sender: nil)
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -144,6 +146,16 @@ class PaintViewController: UIViewController {
         
         //受け取った値を代入
         label.text = text
+        
+//        // 枠線の色
+//        paintView.layer.borderColor = UIColor.black.cgColor
+//        // 枠線の太さ
+//        paintView.layer.borderWidth = 10
+//        // 角丸
+//        paintView.layer.cornerRadius = 30
+//        // 角丸にした部分のはみ出し許可 false:はみ出し可 true:はみ出し不可
+//        paintView.layer.masksToBounds = true
+//        self.view.addSubview(paintView)
     }
     
     @objc func Clock(){
@@ -207,7 +219,7 @@ class PaintViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         var appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.image1 = paintView
+        appDelegate.image1 = canvas.asImage()
         
         if segue.identifier == "toNext2" {
             let svc = segue.destination as! Paint2ViewController
