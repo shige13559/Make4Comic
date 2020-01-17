@@ -112,6 +112,9 @@ class Paint3ViewController: UIViewController {
     
     let canvas = Canvas()
     
+//    var paintView2: UIView = UIView()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -191,9 +194,14 @@ class Paint3ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.image3 = paintView
+        
         if segue.identifier == "toNext4" {
             let svc = segue.destination as! Paint4ViewController
             svc.text = label.text!
+//            svc.paintView3 = paintView!
         }
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bmr-qh-DhE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -461,7 +461,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOt-S3-uFW">
-                                <rect key="frame" x="41" y="663" width="65" height="66"/>
+                                <rect key="frame" x="98" y="398" width="65" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="共有する"/>
                                 <connections>
@@ -475,25 +475,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xwc-oj-ssQ">
-                                <rect key="frame" x="102" y="202" width="178" height="155"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeB-sS-dIk">
-                                <rect key="frame" x="302" y="663" width="65" height="66"/>
+                                <rect key="frame" x="279" y="490" width="65" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="ホームへ"/>
                                 <connections>
                                     <action selector="backHomeButton:" destination="s6W-xb-1Ew" eventType="touchUpInside" id="Qu3-62-jBv"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMs-0E-3e1">
+                                <rect key="frame" x="20" y="162" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="YLW-Xx-LKg"/>
                     </view>
                     <navigationItem key="navigationItem" id="uk4-Az-N1x"/>
                     <connections>
-                        <outlet property="imageView" destination="Xwc-oj-ssQ" id="T7y-bZ-iVd"/>
+                        <outlet property="ShareView" destination="fMs-0E-3e1" id="zkO-fS-tHg"/>
                         <outlet property="label" destination="2e4-Ev-sBT" id="vt2-t9-Xic"/>
                         <segue destination="BYZ-38-t0r" kind="modal" identifier="backHome" modalPresentationStyle="fullScreen" id="gMp-ft-2YW"/>
                     </connections>
@@ -503,7 +504,4 @@
             <point key="canvasLocation" x="992.75362318840587" y="-779.46428571428567"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="gMp-ft-2YW"/>
-    </inferredMetricsTieBreakers>
 </document>

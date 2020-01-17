@@ -11,7 +11,9 @@ import UIKit
 class ShareViewController: UIViewController {
     
     
-    @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var ShareView: UIView!
+    
     
     var text = String()
     
@@ -25,7 +27,8 @@ class ShareViewController: UIViewController {
         
         label.text = text
         
-        
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        ShareView = appDelegate.image4
     }
     
 
@@ -76,6 +79,7 @@ class ShareViewController: UIViewController {
         performSegue(withIdentifier: "backHome", sender: nil)
         
     }
+    
     
     
     

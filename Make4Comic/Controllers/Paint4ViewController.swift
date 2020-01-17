@@ -108,6 +108,8 @@ class Paint4ViewController: UIViewController {
     
     @IBOutlet weak var paintView: UIView!
     
+//    var paintView3: UIView = UIView()
+    
     let canvas = Canvas()
     
     override func viewDidLoad() {
@@ -189,6 +191,10 @@ class Paint4ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.image4 = paintView
+        
         if segue.identifier == "share" {
             let svc = segue.destination as! ShareViewController
             svc.text = label.text!

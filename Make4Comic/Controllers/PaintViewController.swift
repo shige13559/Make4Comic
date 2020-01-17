@@ -98,8 +98,6 @@ class PaintViewController: UIViewController {
     
     var text = String()
     
-//    var counter = Counter()
-    
     @IBOutlet weak var label: UILabel!
     
     var timer = Timer()
@@ -207,16 +205,14 @@ class PaintViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.image1 = paintView
+        
         if segue.identifier == "toNext2" {
             let svc = segue.destination as! Paint2ViewController
             svc.text = label.text!
+//            svc.paintView1 = paintView!
         }
     }
-    
-    
-    
-    
-    
-    
-
 }

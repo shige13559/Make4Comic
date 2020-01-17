@@ -108,6 +108,7 @@ class Paint2ViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var paintView: UIView!
+//    var paintView1: UIView = UIView()
     
     let canvas = Canvas()
     
@@ -191,9 +192,15 @@ class Paint2ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        var appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.image2 = paintView
+        
         if segue.identifier == "toNext3" {
             let svc = segue.destination as! Paint3ViewController
             svc.text = label.text!
+//            svc.paintView1 = paintView!
+//            svc.paintView2 = paintView!
         }
     }
     
